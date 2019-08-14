@@ -1,38 +1,27 @@
-Role Name
-=========
+Ansible Role
+============
 
-A brief description of the role goes here.
+Roles provide a framework for fully independent, or interdependent collections of variables, tasks, files, templates, and modules. In Ansible, the role is the primary mechanism for breaking a playbook into multiple files. This simplifies writing complex playbooks, and it makes them easier to reuse.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+You need to uncomment the below line in the ansible config file ($vi /etc/ansible/ansible.cfg) before creating a role.
 
-Role Variables
+roles_path    = /etc/ansible/roles
+
+Then go to /ect/ansible/roles ($cd /ect/ansible/roles/) and create ansible galaxy with the role name ($ansible-galaxy init lamp).
+Here I gave lamp.
+
+Ansible Galaxy
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Ansible Galaxy refers to the Galaxy website where users can share roles, and to a command line tool for installing, creating and managing roles.
 
-Dependencies
-------------
+-To list all available Roles
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+$ansible-galaxy list
 
-Example Playbook
-----------------
+-To list Contents of the Role
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+$tree lamp/<role name>
