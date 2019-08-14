@@ -1,0 +1,4 @@
+---
+
+- include_tasks: apache-install.yml
+- include_tasks: mariadb-install.yml

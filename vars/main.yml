@@ -1,0 +1,7 @@
+---
+
+domain: www.domain.com
+mysql_root_password: mysqlroot123
+mysql_wp_user: wpuser
+mysql_wp_password: wpuser123
+mysql_wp_database: wordpress
